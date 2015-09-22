@@ -1,5 +1,6 @@
 #include <iostream>
 #include "seven.h"
+/*need to be improved*/
 std::allocator<std::string> Str_vec::alloc;
 
 Str_vec::Str_vec() :
