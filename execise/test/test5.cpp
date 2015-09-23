@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+class Test{
+	public:
+		Test(): curr(0){}
+		Test(vector<string> v1, size_t s=0): v(v1), curr(s) {}
+		void print ();
+	private:
+		vector<string> v;
+		size_t curr;
+};
+
+void Test::print (){
+	if(v.empty())
+		cout<<"its an empty vector"<<endl;
+	else{
+		for(auto i : v)
+			cout<<i<<" ";
+		cout<<endl;
+	}
+	cout<<curr<<endl;
+}
+
+int main(){
+	string s;
+	vector<string> v1;
+	while(cin>>s)
+		v1.push_back(s);
+	Test t1;
+	Test t2(v1);
+	size_t a=5;
+	Test t3(v1, a);
+	t1.print();
+	t2.print();
+	t3.print();
+	return 0;
+}
+
+
